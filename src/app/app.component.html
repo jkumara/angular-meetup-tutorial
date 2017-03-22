@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<div class="todo">
+  <h1>
+    {{ title }}
+  </h1>
+
+  <ul>
+    <app-todo-item
+      *ngFor="let item of todos"
+      (mouseenter)="item.active = true"
+      (mouseleave)="item.active = false"
+      [class.done]="item.done"
+      [class.active]="item.active"
+      [todoItem]="item">
+    </app-todo-item>
+  </ul>
+
+  <app-new-item (onNewItem)="onAddNewItem($event)"></app-new-item>
+</div>

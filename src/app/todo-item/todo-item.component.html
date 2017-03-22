@@ -1,0 +1,7 @@
+<li>
+  <span (click)="todoItem.done = !todoItem.done">
+    {{ todoItem.name }} - {{ todoItem.done ? 'Done!' : 'Not done!' }}
+  </span>
+
+  <button (click)="removeMe()">X</button>
+</li>

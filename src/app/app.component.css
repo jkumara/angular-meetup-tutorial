@@ -1,0 +1,11 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.active /deep/ div {
+  background: yellow;
+}
